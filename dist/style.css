@@ -1,8 +1,11 @@
 :root {
-  --main-red: #e71d36;
+  --main-red: #c92c61;
   --go-color: #2ec4b6;
   --stop-color: #ff9f1c;
   --light-color: #fdfffc;
+  --green-color: #9be197;
+  --grey-color: #cfd8dc;
+  --grey-blue-color: #2f415a;
   --dark-color: #011627;
 }
 
@@ -19,7 +22,7 @@ html {
 }
 
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Arial, sans-serif;
   background-color: var(--dark-color);
 }
 
@@ -42,7 +45,7 @@ header {
   align-items: center;
   width: 100%;
   height: 80px;
-  background-color: var(--dark-color);
+  background-color: var(--main-red);
   color: var(--light-color);
   padding: 0.8rem;
 }
@@ -76,7 +79,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--dark-color);
+  background-color: var(--grey-color);
   border-bottom-left-radius: 1rem;
   padding: 1rem;
   overflow: scroll;
@@ -87,7 +90,7 @@ main {
   display: grid;
   grid-template-rows: 3fr 2fr;
   align-items: center;
-  background-color: var(--go-color);
+  background-color: var(--light-color);
   color: var(--dark-color);
   width: 100%;
   height: 80px;
@@ -101,8 +104,8 @@ main {
 }
 
 .project-card[data-is-active='true'] {
-  background-color: var(--light-color);
-  color: var(--dark-color);
+  background-color: var(--main-red);
+  color: var(--light-color);
 }
 
 .project-name {
@@ -117,6 +120,7 @@ main {
 .list-area {
   padding: 1rem;
   overflow: scroll;
+  background-color: var(--light-color);
 }
 
 .todo-item-card {
@@ -126,7 +130,7 @@ main {
   width: 100%;
   height: 80px;
   font-size: 1.2rem;
-  background-color: var(--stop-color);
+  background-color: var(--green-color);
   color: var(--dark-color);
   border-radius: 1rem;
   padding: 1rem;
@@ -142,18 +146,18 @@ main {
   justify-items: center;
   align-items: center;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50%;
-  height: 80%;
+  width: 500px;
+  height: 500px;
   background-color: var(--light-color);
   border-radius: 1rem;
   z-index: 10;
 }
 
 .modal .modal-header {
-  background-color: var(--dark-color);
+  background-color: var(--main-red);
   width: 100%;
   height: 100%;
   border-top-left-radius: inherit;
@@ -162,7 +166,7 @@ main {
 
 .modal .modal-main {
   width: 80%;
-  height: 60%;
+  height: 70%;
 }
 
 .modal .modal-todo-input {
@@ -184,6 +188,10 @@ main {
 
 .modal .submit-button:hover {
   color: var(--light-color);
+}
+
+.modal .submit-button:active {
+  outline: none;
 }
 
 #submit {

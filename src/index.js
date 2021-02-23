@@ -62,7 +62,7 @@ document.addEventListener(
       dh.showModal();
     }
 
-    if (element.matches('.overlay')) {
+    if (element.matches('.overlay') || element.matches('#cancel')) {
       dh.closeModal();
     }
   },
