@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="../assets/favicon.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="style.css" />
     <script src="main.js" defer></script>
     <title>ToDo</title>
@@ -12,7 +16,9 @@
   <body>
     <div class="main-container">
       <header>
+        <div></div>
         <h1>ToDo</h1>
+        <h1 class="add-item-button">+</h1>
       </header>
       <main>
         <div class="project-sidebar">
@@ -22,13 +28,45 @@
           </div> -->
         </div>
         <div class="list-area">
-          <div class="todo-item-card">
+          <!-- <div class="todo-item-card">
             <p>Todo Title</p>
             <p>Due Date</p>
-          </div>
-          <div class="todo-item-card"></div>
+          </div> -->
         </div>
       </main>
     </div>
+    <div class="modal hidden">
+      <div class="modal-header"></div>
+      <div class="modal-main">
+        <form action="" class="modal-todo-input">
+          <label for="title">Title: </label>
+          <input type="text" id="title" class="text-input" name="title" />
+          <label for="description">Description: </label>
+          <input
+            type="text"
+            id="description"
+            class="text-input"
+            name="description"
+          />
+          <label for="due-date">Due Date: </label>
+          <input type="date" name="due-date" id="due-date" />
+          <label for="priority">High priority: </label>
+          <input type="checkbox" name="priority" id="priority" value="High" />
+          <input
+            type="submit"
+            value="Submit"
+            class="submit-button"
+            id="submit"
+          />
+          <input
+            type="submit"
+            value="Cancel"
+            class="submit-button"
+            id="cancel"
+          />
+        </form>
+      </div>
+    </div>
+    <div class="overlay hidden"></div>
   </body>
 </html>
