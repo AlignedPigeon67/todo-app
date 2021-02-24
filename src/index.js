@@ -19,6 +19,17 @@ const setCurrentProject = proj => {
   populateTodos(proj);
 };
 
+const submitTodoInputForm = e => {
+  const newTodo = new TodoItem(
+    e.title.value,
+    e.description.value,
+    e.dueDate.value,
+    e.priority.value
+  );
+
+  currentProject.addToList(newTodo);
+};
+
 const paintingProject = new Project('Paint kitchen', '21/3/21');
 const takeNap = new Project('Take a nap', '07/8/21');
 
@@ -64,6 +75,11 @@ document.addEventListener(
 
     if (element.matches('.overlay') || element.matches('#cancel')) {
       dh.closeModal();
+    }
+
+    if (element.matches('#submit')) {
+      event.preventDefault();
+      submitTodoInputForm(element);
     }
   },
   false
